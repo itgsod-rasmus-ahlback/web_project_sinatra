@@ -1,0 +1,172 @@
+body {
+	margin:0px;
+	/*padding: 2px;*/
+
+	background-image: url("./bilder/brazil_beach.jpg");
+	background-position: center;
+	background-attachment: fixed;
+}
+
+div {
+	position: relative;
+	float: left;
+	border-radius: 10px;
+}
+
+.margined {
+	margin: 2px;
+}
+
+h1.header_line {
+	margin-left: 20px;
+	color: grey;
+	font-size: 40px;
+}
+
+#header_line a, i {
+	color: white;
+	margin: 0;
+}
+
+
+.no_decor {
+	text-decoration: none;
+}
+
+
+ul.links {
+	list-style-type: none;
+	padding: 0;
+	margin:0;
+}
+
+.links li {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.links a {
+	display: block;
+	padding-left: 7px;
+	text-decoration: none;
+	font-size: 25px;
+
+	margin-top: 5px;
+	width: 130px;
+}
+
+.in_line li {
+	display: inline-block;
+}
+
+.in_line a {
+	width: auto;
+	text-decoration: underline;
+}
+
+#side_link a:hover {
+	background-color: green;
+}
+
+#content {
+	margin-right: auto;
+	margin-left: auto;
+
+	margin-top: 10px;
+	height: 1106px;
+	width: 1100px;
+
+	float: none;
+}
+
+
+
+
+
+/*Head*/
+
+#head {
+	width: 1094px;
+	height: 94px;
+}
+
+#top_menu {
+	height: 102px;
+	float: right;
+	margin-right: 100px;
+}
+
+#top_menu_links a {
+	margin-top: 60px;
+	color: white;
+	padding-right: 20px;
+
+}
+
+#top_menu_links a:hover {
+	display: block;
+	background-color: red;
+	border-radius: 10px;
+	height: 100px;
+	
+}
+
+.active_color {
+	display: block;
+	background-color: red;
+	border-radius: 10px;
+	height: 100px;
+}
+
+.active_link {
+	display: block;
+	background-color: red;
+	border-radius: 10px;
+	height: 100px;
+}
+
+
+/*bottom bar*/
+#bottom_menu {
+
+	position: relative;
+	background-color: green;
+
+	width: 1090px;
+	height: 103px;
+
+	margin-left: 4px;
+}
+
+
+/* content */
+
+#main_content_holder {
+	
+	width: 1094px;
+	height: 897px;
+	background-color: black;
+}
+
+
+
+#sidebar {
+
+	background-color: gold;
+	width: 136px;
+	height: 891px;
+}
+
+#main {
+	background-color: red;
+	width: 950px;
+	height: 891px;
+}
+
+.main_text {
+	padding-left:10px;
+	color: black;
+	font-family: arial;
+	font-size: 20px;
+}
