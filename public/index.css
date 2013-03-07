@@ -5,6 +5,7 @@ body {
 	background-image: url("./bilder/brazil_beach.jpg");
 	background-position: center;
 	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
 
 div {
@@ -54,6 +55,7 @@ ul.links {
 
 	margin-top: 5px;
 	width: 130px;
+	color: yellow;
 }
 
 .in_line li {
@@ -101,29 +103,19 @@ ul.links {
 	margin-top: 60px;
 	color: white;
 	padding-right: 20px;
-
 }
 
-#top_menu_links a:hover {
+#top_menu_links a:hover, .active_link {
 	display: block;
 	background-color: red;
 	border-radius: 10px;
-	height: 100px;
-	
-}
-
-.active_color {
-	display: block;
-	background-color: red;
-	border-radius: 10px;
-	height: 100px;
-}
-
-.active_link {
-	display: block;
-	background-color: red;
-	border-radius: 10px;
-	height: 100px;
+	height: 37px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border: 3px solid black;
+	border-bottom: 0px;
+	position: relative;
+	z-index: 1;
 }
 
 
@@ -147,6 +139,7 @@ ul.links {
 	width: 1094px;
 	height: 897px;
 	background-color: black;
+	z-index: 0;
 }
 
 

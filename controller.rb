@@ -12,7 +12,6 @@ get '/test' do
 end
 
 
-
 get '/' do
 	erb :'index.html'
 end
@@ -24,8 +23,15 @@ end
 
 get '/specialresor' do
 	@test = 'specialresor'
+	@bilder_specialresor = Dir.glob("./public/bilder/specialresor/*.jpg")
 	erb :'specialresor.html'
 end
+
+get '/bilder/:zon' do
+	@get_pics = Dir.glob("./public/bilder/#{params[:zon]}/*.jpg")
+	erb :'bilder.html', {:layout => :"bild_layout"}
+end
+
 
 get '/latindans' do
 	@test = 'latindans'

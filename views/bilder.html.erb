@@ -1,0 +1,19 @@
+<% @i = 0 %>
+
+
+<div id="main" class="margined">
+
+
+	<% @get_pics.each do |bild| %> 
+	<% if @i <= @get_pics.size/2 %>
+		<div id="primary_picture_holder">
+			<img src="#{bild.gsub("/public","")}">
+		</div>
+		<% @i += 1 %>
+	<% else %>
+		<div id="secondary_picture_holder">
+
+		</div>
+	<% end %>
+	<% end %>
+</div>
