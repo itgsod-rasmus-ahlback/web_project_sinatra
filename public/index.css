@@ -155,6 +155,7 @@ ul.links {
 	background-color: red;
 	width: 950px;
 	height: 891px;
+	overflow: auto;
 }
 
 .main_text {
@@ -163,3 +164,20 @@ ul.links {
 	font-family: arial;
 	font-size: 20px;
 }
+
+
+		/*image content*/
+		.image_div {
+			width: 90%;
+			margin: 10px;
+			float: left;
+			border-radius: 10px;
+		}
+
+		.image {
+			/*height: 300px;*/
+			margin-right: auto;
+			margin-left: auto;
+			border-radius: 10px;
+		}
+
