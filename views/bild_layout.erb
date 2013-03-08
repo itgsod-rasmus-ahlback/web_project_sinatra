@@ -5,6 +5,9 @@
 	<title>This</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="/index.css">
+
+
+
 </head>
 <body>
 	<div id="content">
@@ -12,12 +15,29 @@
 			<div>
 				<h1 class="header_line"><a href="/" class="no_decor"><i>Vivamos</i></a></h1>
 			</div>
+			<div id="images_top_menu">
+
+				<% 	top_links = [
+						"Specialresor",
+						"Latindans",
+					] %>
+
+				<ul id="images_top_menu_links" class="links in_line top_image_links">
+					<% top_links.each do |object| %>
+					<% if object.downcase == @test %>
+					<% make_link = "active_link" %>
+					<% else make_link = "non_link" %>
+					<% end %>
+					<li><a href="/<%=object.downcase%>" id="<%=object%>" class="<%=make_link%>"><%= object%></a></li>
+					<% end %>
+				</ul>
+			</div>
 		</div>
 
-		<div id="main_content_holder" class="margined">
+		<div id="main_image_content_holder" class="margined">
 			<%= yield %>
 		</div>
-		<div id="bottom_menu" class="margined">
+		<!-- <div id="bottom_menu" class="margined">
 			<center>
 
 			<% lista = ["Om oss", "Konsumentvägledning", "Teknisk konsultverksamhet", "Kontakt"] %>
@@ -30,7 +50,7 @@
 
 				</ul>
 			</center>
-		</div>
+		</div> -->
 	</div>
 </body>
 </html>

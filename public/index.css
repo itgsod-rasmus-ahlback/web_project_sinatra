@@ -155,7 +155,7 @@ ul.links {
 	background-color: red;
 	width: 950px;
 	height: 891px;
-	overflow: auto;
+	/*overflow: auto;*/
 }
 
 .main_text {
@@ -167,17 +167,60 @@ ul.links {
 
 
 		/*image content*/
+
+
+		#main_image_content_holder {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+
+		#image_content_holder {
+			width: 1200px;
+			height: 893px;
+			margin-right: auto;
+			margin-left: auto;
+			/*background-color: red;*/
+		}
+
 		.image_div {
-			width: 90%;
-			margin: 10px;
+			position: relative;
+			margin-right: 40px;
+			margin-bottom: 40px;
+			
 			float: left;
 			border-radius: 10px;
 		}
 
 		.image {
-			/*height: 300px;*/
+			height: 250px;
+			width: 330px;
 			margin-right: auto;
 			margin-left: auto;
 			border-radius: 10px;
+			border: 3px solid black;
+		}
+
+		#images_top_menu {
+			float: right;
+			top:45%;
+			margin-right: 9px;
+		}
+
+		#images_top_menu li {
+
+		}
+
+		#images_top_menu_links a {
+			top: 10px;
+			padding-right: 10px;
+			color: white;
+		}
+
+		#images_top_menu_links a:hover {
+			display: block;
+			background-color: red;
+			border-radius: 10px;
+			border: 3px solid black;
 		}
 

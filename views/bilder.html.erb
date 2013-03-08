@@ -1,14 +1,15 @@
 <% @i = 0 %>
 
 
-<div id="main" class="margined image_content">
+<div id="image_content_holder" class="margined image_content">
 
-	<div class="margined image_div">
-	<% @get_pics.each do |bild| %> 
-		<div class="image_div">
-			<center>
-			<img src="../<%="#{bild.gsub("/public","")}"%>" class="image">
-			</center>
-		</div>
-	<% end %>
+
+			<% @get_pics.each do |bild| %> 
+
+				<div class="image_div">
+					<img src="../<%="#{bild.gsub("/public","")}"%>" class="image">
+				</div>
+
+			<% end %>
+
 </div>

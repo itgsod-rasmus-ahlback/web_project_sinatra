@@ -4,7 +4,7 @@
 <head>
 	<title>This</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="./index.css">
+	<link rel="stylesheet" type="text/css" href="/index.css">
 </head>
 <body>
 	<div id="content">
@@ -13,11 +13,11 @@
 				<h1 class="header_line"><a href="/" class="no_decor"><i>Vivamos</i></a></h1>
 			</div>
 
-
 				<% 	top_links = [
 						"Specialresor",
 						"Latindans",
 					] %>
+
 			<div id="top_menu">
 				<ul id="top_menu_links" class="links in_line">
 					<% top_links.each do |object| %>
@@ -25,7 +25,7 @@
 					<% make_link = "active_link" %>
 					<% else make_link = "non_link" %>
 					<% end %>
-					<li><a href="./<%=object.downcase%>" id="<%=object%>" class="<%=make_link%>"><%= object%></a></li>
+					<li><a href="/<%=object.downcase%>" id="<%=object%>" class="<%=make_link%>"><%= object%></a></li>
 					<% end %>
 				</ul>
 			</div>

@@ -3,6 +3,10 @@ require 'sinatra'
 layout 'layout.erb'
 
 
+not_found do
+	@broken = true
+	erb :'index.html'
+end
 
 
 @@files = Dir.glob("*/**.html.erb")
@@ -13,6 +17,7 @@ end
 
 
 get '/' do
+	@broken = false
 	erb :'index.html'
 end
 
