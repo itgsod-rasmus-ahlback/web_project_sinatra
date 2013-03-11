@@ -8,8 +8,6 @@ Vi erbjuder inte stjärnhotell och lyxkryssningar, däremot en äkta och spänna
 
 "vivamos.nu erbjuder på detta sätt en exklusiv och aktiv upplevelse av unika resmål i Sydamerika."] %>
 
-
-<% @i = 0%>
 <div id="main" class="margined active_specialresor">
 
 	<% @paragraph.each do |line| %>
@@ -17,10 +15,10 @@ Vi erbjuder inte stjärnhotell och lyxkryssningar, däremot en äkta och spänna
 	<% end %>
 	<center>
 		<p>
-			<img src="./bilder/specialresor/<%=File.basename(@bilder_specialresor[0])%>">
+			<img src="/bilder/specialresor/<%=File.basename(@bilder_specialresor[0])%>">
 		</p>
 	</center>
 	<p class="main_text">
-	<a href="javascript:popUp(./bilder/specialresor)">Mer bilder</a>
+		<a href="javascript:popUp('/bilder/specialresor')">Mer bilder</a>
 	</p>
 </div>
