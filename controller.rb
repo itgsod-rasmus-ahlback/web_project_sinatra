@@ -40,5 +40,6 @@ end
 
 get '/latindans' do
 	@test = 'latindans'
+	@bilder_latindans = Dir.glob("./public/bilder/latindans/*")
 	erb :'latindans.html'
 end

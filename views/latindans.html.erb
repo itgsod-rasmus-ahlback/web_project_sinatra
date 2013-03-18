@@ -1,1 +1,16 @@
-<div id="main" class="margined"></div>
+
+<% @paragraph = ["text"] %>
+
+<div id="main" class="margined">
+		<% @paragraph.each do |line| %>
+		<p class="main_text"><%= line.gsub("POP", "'") %></p>
+	<% end %>
+	<center>
+		<p>
+			<img src="/bilder/latindans/<%=File.basename(@bilder_latindans[0])%>">
+		</p>
+	</center>
+	<p class="main_text">
+		<a href="javascript:popUp('/bilder/latindans')">Mer bilder</a>
+	</p>
+</div>
