@@ -26,9 +26,10 @@ get '/teknisk_konsultverksamhet' do
 	erb :'teknisk_konsultverksamhet.html'
 end
 
-get '/specialresor' do
+get '/:page' do
 	@test = 'specialresor'
-	@bilder_specialresor = Dir.glob("./public/bilder/specialresor/*.jpg")
+	@bilder_specialresor = Dir.glob("./public/bilder/#{params[:page]}/*.jpg")
+	@paragraph = File.readlines("./public/text/#{params[:page]}")
 	erb :'specialresor.html'
 end
 
