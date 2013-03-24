@@ -16,9 +16,15 @@ class MainController
 	end
 
 	def find_pictures(search_term)
-		checker = Dir.glob("./public/bilder/#{search_term}/*").each do |picture|
+		checker = []
+		Dir.glob("./public/bilder/#{search_term}/*").each do |picture|
+			checker << picture
+		end
+		if checker.size >= 1
 			return checker
-		end 
+		else
+			return ["false"]
+		end
 	end
 
 end
@@ -43,13 +49,17 @@ end
 
 
 get '/' do
-	@broken = false
-	erb :'index.html'
+	@bilder = ["false"]
+	@paragraph = File.readlines("./public/text/start")
+	@param = "start"
+	@cool_text = "cool_text"
+	erb :'page.html'
 end
 
 get '/:page' do
+	@cool_text = "not_cool_text"
 	if @@MainController.find_text(params[:page]) == false
-		@bilder = 
+		@bilder = @@MainController.find_pictures(params[:page])
 		@paragraph = File.readlines("./public/text/#{params[:page]}")
 		@param = params[:page]
 	else
