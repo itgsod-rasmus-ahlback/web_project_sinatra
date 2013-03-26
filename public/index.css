@@ -104,14 +104,14 @@ ul.links {
 #top_menu_links a {
 	margin-top: 60px;
 	color: white;
-	padding-right: 1px;
+	padding-right: 6px;
 }
 
 #top_menu_links a:hover, .active_link {
 	display: block;
 	background-color: #00cc99;
 	border-radius: 10px;
-	height: 37px;
+	height: 40px;
 	border-bottom-right-radius: 0px;
 	border-bottom-left-radius: 0px;
 	border: 3px solid black;
@@ -138,9 +138,10 @@ ul.links {
 
 #main_content_holder {
 	margin: 0;
+	padding: 0;
 	width: 1094px;
 	/*height: 897px;*/
-	background-color: black;
+	/*background-color: black;*/
 	z-index: 0;
 }
 
@@ -154,10 +155,13 @@ ul.links {
 }
 
 #main {
-	margin-top: 0px;
+	margin:0;
+	padding: 0;
+	border: 3px solid black;
 	background-color: #00cc99;
-	width: 1090px;
-	height: 100%;
+	width: 1088px;
+	z-index: 0;
+	/*height: 9%;*/
 	/*overflow: auto;*/
 }
 
@@ -218,6 +222,10 @@ ul.links {
 			margin-left: auto;
 			border-radius: 10px;
 			border: 3px solid black;
+		}
+
+		.image:hover {
+			border-color: blue;
 		}
 
 		#images_top_menu {

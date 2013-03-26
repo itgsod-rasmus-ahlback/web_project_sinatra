@@ -14,7 +14,7 @@
 		document.getElementById('scriptedlink').innerText="Mer bilder";
 	}
 	function popUp(test) {
-	props=window.open(test, 'poppage', 'toolbars=1, scrollbars=0, location=0, statusbars=0, menubars=0, resizable=0, width=1200, height=600%, left = 100, top = 50');
+	props=window.open(test, 'poppage', 'toolbars=1, scrollbars=0, location=0, statusbars=0, menubars=0, resizable=0, width=1300, height=600%, left = 100, top = 50');
 	}
 	//-->
 	</script>
@@ -35,9 +35,9 @@
 
 			<div id="top_menu">
 				<ul id="top_menu_links" class="links in_line">
-					<li><a href="/">Hem</a></li>
+					<li><a href="/" class="<%= if @page == "" then "active_link" end%>">Hem</a></li>
 					<% top_links.each do |object| %>
-					<% if object == @page %>
+					<% if object.downcase == @page %>
 					<% make_link = "active_link" %>
 					<% else make_link = "non_link" %>
 					<% end %>
