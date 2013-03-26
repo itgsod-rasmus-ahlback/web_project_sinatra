@@ -12,7 +12,8 @@
 	</center>
 	<p class="main_text">
 		<% if @param != false and File.basename(@bilder[0]) != "false" %>
-		<a href="javascript:popUp('/bilder/<%= @param %>')">Mer bilder</a>
+		<noscript> <a href="/bilder/<%=@param%>" target="_BLANK">Mer bilder</a> </noscript>
+		<a href="javascript:popUp('/bilder/<%= @param %>')" id="scriptedlink"></a>
 		<% end %>
 	</p>
 </div>

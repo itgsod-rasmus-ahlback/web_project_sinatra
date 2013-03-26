@@ -8,29 +8,37 @@
 
 
 	<script type="text/javascript">
-	function popUp(test) {
-	props=window.open(test, 'poppage', 'toolbars=1, scrollbars=0, location=0, statusbars=0, menubars=0, resizable=0, width=1200, height=900%, left = 100, top = 50');
+	<!--
+	function Load()
+	{
+		document.getElementById('scriptedlink').innerText="Mer bilder";
 	}
+	function popUp(test) {
+	props=window.open(test, 'poppage', 'toolbars=1, scrollbars=0, location=0, statusbars=0, menubars=0, resizable=0, width=1200, height=600%, left = 100, top = 50');
+	}
+	//-->
 	</script>
 
 
 </head>
-<body>
+<body onload="Load()">
 	<div id="content">
 		<div id="head" class="margined">
+			
 			<div>
-				<h1 class="header_line"><a href="/" class="no_decor"><i>Vivamos</i></a></h1>
+				<h1 class="header_line"><a href="/" class="no_decor"><i>Vivamos - <%= @page.gsub("_"," ") %></i></a></h1>
 			</div>
 
 				<% 	top_links = [
 						"Specialresor",
-						"Latindans",
+						"Latindans","Om oss", "Teknisk konsultverksamhet", "Kontakt"
 					] %>
 
 			<div id="top_menu">
 				<ul id="top_menu_links" class="links in_line">
+					<li><a href="/">Hem</a></li>
 					<% top_links.each do |object| %>
-					<% if object.downcase == @test %>
+					<% if object == @page %>
 					<% make_link = "active_link" %>
 					<% else make_link = "non_link" %>
 					<% end %>
@@ -49,12 +57,12 @@
 		<div id="bottom_menu" class="margined">
 			<center>
 
-			<% lista = ["Om oss", "Konsumentvägledning", "Teknisk konsultverksamhet", "Kontakt"] %>
+			<% lista = ["Om oss", "Konsumentvagledning", "Teknisk konsultverksamhet", "Kontakt"] %>
 
 				<ul class="links in_line ">
 
 					<% lista.each do |object| %>
-					<li> <a href="<%=object.downcase.gsub(" ", "_")%>"><%= object %></a> </li>
+					<li> <a href="<%=object.downcase.gsub(" ", "_")%>"><%= object.gsub("Konsumentvagledning", "Konsumentvägledning") %></a> </li>
 					<% end %>
 
 				</ul>

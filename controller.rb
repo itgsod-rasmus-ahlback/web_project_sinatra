@@ -7,7 +7,6 @@ class MainController
 
 	def find_text(search_term)
 		Dir.glob("./public/text/*").each do |object|
-			puts object
 			if search_term == File.basename(object)
 				return false
 			end
@@ -53,6 +52,7 @@ get '/' do
 	@paragraph = File.readlines("./public/text/start")
 	@param = "start"
 	@cool_text = "cool_text"
+	@page = ""
 	erb :'page.html'
 end
 
@@ -67,6 +67,7 @@ get '/:page' do
 		@paragraph = File.readlines("./public/text/notfound")
 		@param = false
 	end
+		@page = params[:page].downcase
 		erb :'page.html'
 end
 

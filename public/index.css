@@ -54,7 +54,7 @@ ul.links {
 	font-size: 25px;
 
 	margin-top: 5px;
-	width: 130px;
+	/*width: 130px;*/
 	color: yellow;
 }
 
@@ -76,7 +76,7 @@ ul.links {
 	margin-left: auto;
 
 	margin-top: 10px;
-	height: 1106px;
+	/*height: 1106px;*/
 	width: 1100px;
 
 	float: none;
@@ -104,12 +104,12 @@ ul.links {
 #top_menu_links a {
 	margin-top: 60px;
 	color: white;
-	padding-right: 20px;
+	padding-right: 1px;
 }
 
 #top_menu_links a:hover, .active_link {
 	display: block;
-	background-color: red;
+	background-color: #00cc99;
 	border-radius: 10px;
 	height: 37px;
 	border-bottom-right-radius: 0px;
@@ -127,19 +127,19 @@ ul.links {
 	position: relative;
 	background-color: green;
 
-	width: 1090px;
+	width: 1094px;
 	height: 103px;
 
-	margin-left: 4px;
+	margin-left: 0px;
 }
 
 
 /* content */
 
 #main_content_holder {
-	
+	margin: 0;
 	width: 1094px;
-	height: 897px;
+	/*height: 897px;*/
 	background-color: black;
 	z-index: 0;
 }
@@ -149,14 +149,15 @@ ul.links {
 #sidebar {
 
 	background-color: gold;
-	width: 136px;
-	height: 891px;
+	/*width: 136px;*/
+	
 }
 
 #main {
-	background-color: red;
-	width: 950px;
-	height: 891px;
+	margin-top: 0px;
+	background-color: #00cc99;
+	width: 1090px;
+	height: 100%;
 	/*overflow: auto;*/
 }
 
