@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+<!-- Made by Rasmus Ahlbäck -->
 <html>
 <head>
 	<title>Vivamos.nu</title>
@@ -14,7 +15,7 @@
 		document.getElementById('scriptedlink').innerText="Mer bilder";
 	}
 	function popUp(test) {
-	props=window.open(test, 'poppage', 'toolbars=1, scrollbars=0, location=0, statusbars=0, menubars=0, resizable=0, width=1200%, height=600%, left = 100, top = 50');
+	props=window.open(test, 'poppage', 'toolbars=1, scrollbars=0, location=0, statusbars=0, menubars=0, resizable=0, width=1400, height=600%, left = 100, top = 50');
 	}
 	//-->
 	</script>
@@ -25,7 +26,7 @@
 	<div id="content">
 		<div id="head" class="margined">
 			<div>
-				<h1 class="header_line"><a href="/" class="no_decor"><i>Vivamos <%=@page.gsub("_"," ") %></i></a></h1>
+				<h1 class="header_line"><a href="/" class="no_decor"><i>Vivamos <%=@page.gsub("_"," ").gsub("%20"," ") %></i></a></h1>
 			</div>
 
 				<% 	top_links = [
