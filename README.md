@@ -9,4 +9,4 @@ Det här är resultatet av mitt projekt skriven i *sinatra*.
 För att starta webbsidan
 
 1. Starta controller.rb
-2. Gå in på sidan *localhost:4567*
+2. Standard sökvägen om servern körs på samma dator *localhost:4567*
