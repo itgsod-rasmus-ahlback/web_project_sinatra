@@ -224,10 +224,6 @@ ul.links {
 			border: 3px solid black;
 		}
 
-		.image:hover {
-			border-color: blue;
-		}
-
 		#images_top_menu {
 			float: right;
 			top:45%;
